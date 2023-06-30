@@ -1,9 +1,9 @@
-package shop.mtcoding.servicebank.core.exception;
+package shop.mtcoding.servicebank._core.erros.exception;
 
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
-import shop.mtcoding.servicebank.dto.ResponseDTO;
+import shop.mtcoding.servicebank._core.utils.ApiUtils;
 
 
 // 인증 안됨
@@ -13,10 +13,8 @@ public class Exception401 extends RuntimeException {
         super(message);
     }
 
-    public ResponseDTO<?> body(){
-        ResponseDTO<String> responseDto = new ResponseDTO<>();
-        responseDto.fail(HttpStatus.UNAUTHORIZED, "unAuthorized", getMessage());
-        return responseDto;
+    public ApiUtils.ApiResult<?> body(){
+        return ApiUtils.error(getMessage(), HttpStatus.UNAUTHORIZED);
     }
 
     public HttpStatus status(){

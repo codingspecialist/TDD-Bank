@@ -1,9 +1,9 @@
-package shop.mtcoding.servicebank.core.util;
+package shop.mtcoding.servicebank._core.utils;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class MyDateUtils {
+public class DateUtils {
     public static String toStringFormat(LocalDateTime localDateTime) {
         return localDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }

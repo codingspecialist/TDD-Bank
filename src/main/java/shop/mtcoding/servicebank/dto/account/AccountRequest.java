@@ -13,7 +13,7 @@ public class AccountRequest {
 
     @Setter
     @Getter
-    public static class SaveInDTO {
+    public static class SaveDTO {
         @NotNull
         @Digits(integer = 4, fraction = 0)
         private Integer number;
@@ -34,7 +34,7 @@ public class AccountRequest {
 
     @Setter
     @Getter
-    public static class TransferInDTO {
+    public static class TransferDTO {
         @NotNull
         @Digits(integer = 4, fraction = 0)
         private Integer withdrawNumber;

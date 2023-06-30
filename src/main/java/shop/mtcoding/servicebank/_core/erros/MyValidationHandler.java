@@ -1,4 +1,4 @@
-package shop.mtcoding.servicebank.core.advice;
+package shop.mtcoding.servicebank._core.erros;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -6,11 +6,11 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
-import shop.mtcoding.servicebank.core.exception.Exception400;
+import shop.mtcoding.servicebank._core.erros.exception.Exception400;
 
 @Aspect
 @Component
-public class MyValidAdvice {
+public class MyValidationHandler {
     @Pointcut("@annotation(org.springframework.web.bind.annotation.PostMapping)")
     public void postMapping() {
     }

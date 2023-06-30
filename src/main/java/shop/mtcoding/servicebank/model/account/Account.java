@@ -3,9 +3,9 @@ package shop.mtcoding.servicebank.model.account;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import shop.mtcoding.servicebank.core.exception.Exception400;
-import shop.mtcoding.servicebank.core.exception.Exception401;
-import shop.mtcoding.servicebank.core.exception.Exception403;
+import shop.mtcoding.servicebank._core.erros.exception.Exception400;
+import shop.mtcoding.servicebank._core.erros.exception.Exception401;
+import shop.mtcoding.servicebank._core.erros.exception.Exception403;
 import shop.mtcoding.servicebank.model.user.User;
 
 import javax.persistence.*;

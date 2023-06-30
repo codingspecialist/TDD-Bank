@@ -1,9 +1,8 @@
-package shop.mtcoding.servicebank.core.exception;
+package shop.mtcoding.servicebank._core.erros.exception;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
-import shop.mtcoding.servicebank.dto.ResponseDTO;
-import shop.mtcoding.servicebank.dto.ValidDTO;
+import shop.mtcoding.servicebank._core.utils.ApiUtils;
 
 
 // 유효성 검사 실패, 잘못된 파라메터 요청
@@ -14,16 +13,13 @@ public class Exception400 extends RuntimeException {
     private String value;
 
     public Exception400(String key, String value) {
-        super(value);
+        super(key+" : "+value);
         this.key = key;
         this.value = value;
     }
 
-    public ResponseDTO<?> body(){
-        ResponseDTO<ValidDTO> responseDto = new ResponseDTO<>();
-        ValidDTO validDTO = new ValidDTO(key, value);
-        responseDto.fail(HttpStatus.BAD_REQUEST, "badRequest", validDTO);
-        return responseDto;
+    public ApiUtils.ApiResult<?> body(){
+        return ApiUtils.error(getMessage(), HttpStatus.BAD_REQUEST);
     }
 
     public HttpStatus status(){
