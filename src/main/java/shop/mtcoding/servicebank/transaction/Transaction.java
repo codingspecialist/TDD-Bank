@@ -1,9 +1,9 @@
-package shop.mtcoding.servicebank.model.transaction;
+package shop.mtcoding.servicebank.transaction;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import shop.mtcoding.servicebank.model.account.Account;
+import shop.mtcoding.servicebank.account.Account;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

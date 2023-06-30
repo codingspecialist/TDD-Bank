@@ -5,7 +5,7 @@ import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import org.springframework.stereotype.Component;
-import shop.mtcoding.servicebank.model.user.User;
+import shop.mtcoding.servicebank.user.User;
 import com.auth0.jwt.JWT;
 import java.util.Date;
 

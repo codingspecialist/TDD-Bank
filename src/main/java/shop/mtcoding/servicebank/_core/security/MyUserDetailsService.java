@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import shop.mtcoding.servicebank._core.erros.exception.Exception401;
-import shop.mtcoding.servicebank.model.user.User;
-import shop.mtcoding.servicebank.model.user.UserRepository;
+import shop.mtcoding.servicebank.user.User;
+import shop.mtcoding.servicebank.user.UserRepository;
 
 @RequiredArgsConstructor
 @Service

@@ -1,4 +1,4 @@
-package shop.mtcoding.servicebank.model.user;
+package shop.mtcoding.servicebank.user;
 
 import lombok.Builder;
 import lombok.Getter;

@@ -1,9 +1,8 @@
-package shop.mtcoding.servicebank.dto.account;
+package shop.mtcoding.servicebank.account;
 
 import lombok.Getter;
 import lombok.Setter;
-import shop.mtcoding.servicebank.model.account.Account;
-import shop.mtcoding.servicebank.model.user.User;
+import shop.mtcoding.servicebank.user.User;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Min;

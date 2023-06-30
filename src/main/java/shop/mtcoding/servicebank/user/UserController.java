@@ -1,4 +1,4 @@
-package shop.mtcoding.servicebank.controller;
+package shop.mtcoding.servicebank.user;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import shop.mtcoding.servicebank._core.security.JwtTokenProvider;
 import shop.mtcoding.servicebank._core.utils.ApiUtils;
-import shop.mtcoding.servicebank.dto.user.UserRequest;
-import shop.mtcoding.servicebank.dto.user.UserResponse;
-import shop.mtcoding.servicebank.service.UserService;
 
 import javax.validation.Valid;
 

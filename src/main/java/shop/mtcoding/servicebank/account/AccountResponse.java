@@ -1,11 +1,10 @@
-package shop.mtcoding.servicebank.dto.account;
+package shop.mtcoding.servicebank.account;
 
 import lombok.Getter;
 import lombok.Setter;
 import shop.mtcoding.servicebank._core.utils.DateUtils;
-import shop.mtcoding.servicebank.model.account.Account;
-import shop.mtcoding.servicebank.model.transaction.Transaction;
-import shop.mtcoding.servicebank.model.user.User;
+import shop.mtcoding.servicebank.transaction.Transaction;
+import shop.mtcoding.servicebank.user.User;
 
 import java.util.List;
 import java.util.stream.Collectors;

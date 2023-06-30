@@ -1,4 +1,4 @@
-package shop.mtcoding.servicebank.model.user;
+package shop.mtcoding.servicebank.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

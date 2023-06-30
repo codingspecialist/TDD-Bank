@@ -1,4 +1,4 @@
-package shop.mtcoding.servicebank.model.account;
+package shop.mtcoding.servicebank.account;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import shop.mtcoding.servicebank._core.erros.exception.Exception400;
 import shop.mtcoding.servicebank._core.erros.exception.Exception401;
 import shop.mtcoding.servicebank._core.erros.exception.Exception403;
-import shop.mtcoding.servicebank.model.user.User;
+import shop.mtcoding.servicebank.user.User;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

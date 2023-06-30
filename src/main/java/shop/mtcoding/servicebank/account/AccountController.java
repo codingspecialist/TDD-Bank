@@ -1,17 +1,13 @@
-package shop.mtcoding.servicebank.controller;
+package shop.mtcoding.servicebank.account;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
-import shop.mtcoding.servicebank._core.erros.exception.Exception401;
 import shop.mtcoding.servicebank._core.erros.exception.Exception403;
 import shop.mtcoding.servicebank._core.security.MyUserDetails;
 import shop.mtcoding.servicebank._core.utils.ApiUtils;
-import shop.mtcoding.servicebank.dto.account.AccountRequest;
-import shop.mtcoding.servicebank.dto.account.AccountResponse;
-import shop.mtcoding.servicebank.service.AccountService;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;

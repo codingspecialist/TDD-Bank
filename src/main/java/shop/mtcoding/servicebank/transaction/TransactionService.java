@@ -1,14 +1,14 @@
-package shop.mtcoding.servicebank.service;
+package shop.mtcoding.servicebank.transaction;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import shop.mtcoding.servicebank._core.erros.exception.Exception404;
-import shop.mtcoding.servicebank.dto.transaction.TransactionResponse;
-import shop.mtcoding.servicebank.model.account.Account;
-import shop.mtcoding.servicebank.model.account.AccountRepository;
-import shop.mtcoding.servicebank.model.transaction.Transaction;
-import shop.mtcoding.servicebank.model.transaction.TransactionRepository;
+import shop.mtcoding.servicebank.transaction.TransactionResponse;
+import shop.mtcoding.servicebank.account.Account;
+import shop.mtcoding.servicebank.account.AccountRepository;
+import shop.mtcoding.servicebank.transaction.Transaction;
+import shop.mtcoding.servicebank.transaction.TransactionRepository;
 
 import java.util.List;
 

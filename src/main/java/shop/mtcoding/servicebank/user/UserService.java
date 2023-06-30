@@ -1,4 +1,4 @@
-package shop.mtcoding.servicebank.service;
+package shop.mtcoding.servicebank.user;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -11,10 +11,6 @@ import shop.mtcoding.servicebank._core.erros.exception.Exception400;
 import shop.mtcoding.servicebank._core.erros.exception.Exception401;
 import shop.mtcoding.servicebank._core.security.JwtTokenProvider;
 import shop.mtcoding.servicebank._core.security.MyUserDetails;
-import shop.mtcoding.servicebank.dto.user.UserRequest;
-import shop.mtcoding.servicebank.dto.user.UserResponse;
-import shop.mtcoding.servicebank.model.user.User;
-import shop.mtcoding.servicebank.model.user.UserRepository;
 
 import java.util.Optional;
 
