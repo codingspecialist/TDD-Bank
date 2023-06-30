@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @NoArgsConstructor
@@ -29,6 +31,8 @@ public class User { // extends 시간설정 (상속)
     @Column(nullable = false, length = 20)
     private String fullName;
 
+    private String roles;
+
     private Boolean status; // true, false
 
     @Column(nullable = false)
@@ -47,12 +51,13 @@ public class User { // extends 시간설정 (상속)
     }
 
     @Builder
-    public User(Long id, String username, String password, String email, String fullName, Boolean status, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public User(Long id, String username, String password, String email, String fullName, String roles, Boolean status, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.email = email;
         this.fullName = fullName;
+        this.roles = roles;
         this.status = status;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;

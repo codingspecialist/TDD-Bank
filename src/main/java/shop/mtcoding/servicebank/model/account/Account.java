@@ -3,6 +3,7 @@ package shop.mtcoding.servicebank.model.account;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
 import shop.mtcoding.servicebank._core.erros.exception.Exception400;
 import shop.mtcoding.servicebank._core.erros.exception.Exception401;
 import shop.mtcoding.servicebank._core.erros.exception.Exception403;
@@ -13,7 +14,9 @@ import java.time.LocalDateTime;
 
 @NoArgsConstructor
 @Getter
-@Table(name = "account_tb")
+@Table(name = "account_tb", indexes = {
+        @Index(name = "idx_account_number", columnList = "number")
+})
 @Entity
 public class Account {
     @Id

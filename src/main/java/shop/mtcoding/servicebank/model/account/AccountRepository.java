@@ -10,7 +10,7 @@ import java.util.Optional;
 public interface AccountRepository extends JpaRepository<Account, Long> {
 
     @Query("select ac from Account ac where ac.number = :number")
-    Optional<Account> findByNumber(@Param("number") Long number);
+    Optional<Account> findByNumber(@Param("number") Integer number);
 
     @Query("select ac from Account ac where ac.user.id = :userId")
     List<Account> findByUserId(Long userId);
