@@ -21,14 +21,8 @@ spring:
         format_sql: true
       default_batch_fetch_size: 100
     open-in-view: true
-  # 404 ???? ?
-  mvc:
-    throw-exception-if-no-handler-found: true
-  web:
-    resources:
-      add-mappings: false
 
 logging:
   level:
-    '[shop.mtcoding.servicebank]': DEBUG # DEBUG ???? ?? ??? ? ?? ????
-    '[org.hibernate.type]': TRACE # ?? ??? ? ? ??? ? ??
+    '[shop.mtcoding.servicebank]': DEBUG
+    '[org.hibernate.type]': TRACE
