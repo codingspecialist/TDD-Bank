@@ -8,22 +8,13 @@ group = 'shop.mtcoding'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
-    }
-}
 
 repositories {
     mavenCentral()
 }
 
-ext {
-    set('snippetsDir', file("build/generated-snippets"))
-}
 
 dependencies {
-    implementation group: 'com.auth0', name: 'java-jwt', version: '4.3.0'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-aop'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -31,12 +22,23 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
     runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // third party
+    implementation group: 'org.qlrm', name: 'qlrm', version: '2.1.1'
+    implementation group: 'com.auth0', name: 'java-jwt', version: '4.3.0'
 }
 
+// gradle 테스트시 한글 안깨지게 utf-8 추가
 tasks.named('test') {
-    outputs.dir snippetsDir
+    systemProperty 'file.encoding', 'UTF-8'
     useJUnitPlatform()
+}
+
+// jar build시에 jar 파일 하나만 생기게 하기 (plain.jar 안생기게)
+jar {
+    enabled = false
 }

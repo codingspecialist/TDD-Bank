@@ -18,10 +18,10 @@ public class Transaction {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Account withdrawAccount;
+    private Account withdrawAccount; // 2222
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Account depositAccount;
+    private Account depositAccount; // 1111
 
     @Column(nullable = false)
     private Long amount;

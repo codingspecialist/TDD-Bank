@@ -3,6 +3,8 @@ package shop.mtcoding.servicebank.user;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -23,7 +25,7 @@ public class User { // extends 시간설정 (상속)
     @Column(unique = true, nullable = false, length = 20)
     private String username;
 
-    @Column(nullable = false, length = 60) // 패스워드 인코딩(BCrypt)
+    @Column(nullable = false, length = 120) // 패스워드 인코딩(BCrypt)
     private String password;
 
     @Column(nullable = false, length = 20)
@@ -31,7 +33,7 @@ public class User { // extends 시간설정 (상속)
     @Column(nullable = false, length = 20)
     private String fullName;
 
-    private String roles;
+    private String roles; // USER, ADMIN
 
     private Boolean status; // true, false
 
